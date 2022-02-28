@@ -1,0 +1,325 @@
+*----------------------------------------------------------------------------------*
+*Form barchart_style
+*Define the initiation of HTML object plus the style of the barchart
+*Performed before the table and the barchart.
+*----------------------------------------------------------------------------------*
+FORM barchart_style.
+	wa_objtxt = '<!DOCTYPE html>'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '<html>'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '<head>'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '<style>'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = 'body, table, input, select, textarea {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '.graph {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '	margin-bottom:1em;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '  font:normal 100%/150% arial,helvetica,sans-serif;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '.graph caption {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '	font:bold 150%/120% arial,helvetica,sans-serif;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '	padding-bottom:0.33em;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '.graph tbody th {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '	text-align:right;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '@supports (display:grid) {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '	@media (min-width:32em) {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			display:block;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '      width:600px;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '      height:300px;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph caption {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			display:block;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph thead {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			display:none;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tbody {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			position:relative;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			display:grid;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			grid-template-columns:repeat(auto-fit, minmax(2em, 1fr));'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			column-gap:2.5%;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			align-items:end;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			height:100%;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			margin:3em 0 1em 2.8em;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			padding:0 1em;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			border-bottom:2px solid rgba(0,0,0,0.5);'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			background:repeating-linear-gradient('
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '				180deg,'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '				rgba(170,170,170,0.7) 0,'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '				rgba(170,170,170,0.7) 1px,'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '				transparent 1px,'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '				transparent 20%'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			);'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tbody:before,'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tbody:after {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			position:absolute;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			left:-3.2em;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			width:2.8em;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			text-align:right;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			font:bold 80%/120% arial,helvetica,sans-serif;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tbody:before {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			content:"100%";'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			top:-0.6em;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tbody:after {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			content:"0%";'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			bottom:-0.6em;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tr {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			position:relative;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			display:block;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tr:hover {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			z-index:999;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph th,'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph td {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			display:block;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			text-align:center;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tbody th {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			position:absolute;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			top:-3em;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			left:0;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			width:100%;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			font-weight:normal;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			text-align:center;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '      white-space:nowrap;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			text-indent:0;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			transform:rotate(-45deg);'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tbody th:after {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			content:"";'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph td {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			width:100%;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			height:100%;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			background:#F63;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			border-radius:0.5em 0.5em 0 0;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			transition:background 0.5s;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tr:hover td {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			opacity:0.7;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph td span {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			overflow:hidden;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			position:absolute;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			left:50%;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			top:50%;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			width:0;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			padding:0.5em 0;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			margin:-1em 0 0;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			font:normal 85%/120% arial,helvetica,sans-serif;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '/* 			background:white; */'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '/* 			box-shadow:0 0 0.25em rgba(0,0,0,0.6); */'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			font-weight:bold;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			opacity:0;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			transition:opacity 0.5s;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '      color:white;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.toggleGraph:checked + table td span,'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		.graph tr:hover td span {'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			width:4em;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			margin-left:-2em; /* 1/2 the declared width */'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '			opacity:1;'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '		}'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '    '
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '	} /* min-width:32em */'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '} /* grid only */'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '</style>'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = '</head>'
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+	wa_objtxt = ''
+	APPEND wa_objtxt TO it_objtxt.
+ENDFORM. "END of barchart_style.

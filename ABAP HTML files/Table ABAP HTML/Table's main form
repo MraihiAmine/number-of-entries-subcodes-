@@ -1,0 +1,15 @@
+wa_objtxt = '<table Style="border:1px solid black;margin-left: auto;margin-right: auto; margin-bottom:50px;">'.
+APPEND wa_objtxt TO it_objtxt.
+wa_objtxt = '  <tr Style="border:1px solid black;">'.
+APPEND wa_objtxt TO it_objtxt.
+wa_objtxt = '    <th Style="border:1px solid black;">CHECK_DATE</th>'.
+APPEND wa_objtxt TO it_objtxt.
+wa_objtxt = '    <th Style="border:1px solid black;">SERVER_NAME</th>'.
+APPEND wa_objtxt TO it_objtxt.
+wa_objtxt = '    <th Style="border:1px solid black;">NBR_ENTRIES</th>'.
+APPEND wa_objtxt TO it_objtxt.
+wa_objtxt = '  </tr>'.
+APPEND wa_objtxt TO it_objtxt.
+PERFORM table_rows.
+wa_objtxt = '</table>'.
+APPEND wa_objtxt TO it_objtxt.
